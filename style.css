@@ -1,7 +1,47 @@
+body {
+    background: #fafafafa;
+}
+
 .dino {
     width: 60px;
     height: 60px;
-    background: green;
+    background-image: url(dino.png);
     position: absolute;  /*fica na posição definida independente doque tiver em volta */
     bottom: 0;          /*vai ficar embaixo*/
+}
+
+.cactus {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    background: url(cactus.png);
+}
+
+.game-over {
+    text-align: center;
+    color: #666;
+    margin-top:50px 0;
+    font-family: arial;
+}
+
+
+@keyframes slideright {   /*animaçao para fazer a tela se mover da direita para a esquerda*/
+    from {
+        background-position: 70000%;
+    }
+    to {
+        background-position: 0%;
+    }
+}
+
+.background {
+    position: absolute;
+    bottom: 0;
+    background-image: url('background.png');
+    background-repeat: repeat-x;
+    animation: slideright 600s infinite linear;
+    -webkit-animation: slideright 600s infinite linear;
+    width: 100%;
+    height: 200px;
 }
